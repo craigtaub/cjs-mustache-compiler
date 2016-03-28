@@ -3,13 +3,14 @@
 Simple solution for compiling mustache templates into a CommonJS Module
 
 # Why?
-For server-side or (via browserify) client-side use.
-To share.
+To share same templates on server-side and client-side use (via browserify).
 
 # How?
 Builds them into pre-compiled templates.
 
-# Usage
+# Usage:
+
+# Build templates
 
 Gulp:
 
@@ -27,6 +28,12 @@ Gulp:
 NPM script:
 
     'node node_modules/cjsmc/lib/index.js >> client/templates.js'
+
+# Use templates
+
+    var templates from './client/templates';
+    templates['first.mustache'];
+
 
 # TODO
 
