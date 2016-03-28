@@ -27,3 +27,11 @@ Gulp:
 NPM script:
 
     'node node_modules/cjsmc/lib/index.js >> client/templates.js'
+
+# TODO
+
+Clean usage so can use pipe in format:
+
+    return gulp.src('.')
+      .pipe(cjsmc())
+      .pipe(gulp.dest('client/templates'));
