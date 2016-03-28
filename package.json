@@ -1,11 +1,8 @@
 {
   "name": "cjsmc",
   "version": "1.0.0",
-  "description": "",
+  "description": "Compiling mustache templates into a CommonJS Module",
   "main": "lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
+  "author": "Craig Taub <craigtaub@gmail.com>",
   "license": "ISC"
 }
