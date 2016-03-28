@@ -30,7 +30,7 @@ NPM script:
 
 # TODO
 
-Clean usage so can use pipe in format:
+Clean usage so can use cjsmc as gulp-plugin (gulp-cjsmc). https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/README.md
 
     return gulp.src('.')
       .pipe(cjsmc())
