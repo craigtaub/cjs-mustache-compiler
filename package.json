@@ -1,13 +1,13 @@
 {
   "name": "cjsmc",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Compiling mustache templates into a CommonJS Module",
   "main": "lib/index.js",
   "author": "Craig Taub <craigtaub@gmail.com>",
   "license": "ISC",
-  "repository" : {
-      "type" : "git",
-      "url" : "http://github.com/craigtaub/cjsmc.git"
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/craigtaub/cjsmc.git"
   },
   "homepage": "http://github.com/craigtaub/cjsmc"
 }
