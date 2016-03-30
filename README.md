@@ -1,6 +1,8 @@
 # CJS Mustache Compiler [![npm version](https://badge.fury.io/js/cjsmc.svg)](https://badge.fury.io/js/cjsmc)
 
 Simple solution for compiling Mustache templates into a CommonJS Module.
+Example APP using it located https://github.com/craigtaub/cjsmc-example-app
+Shares compiled templates.
 
 # Why?
 To share same templates on server-side and client-side use (via browserify).
