@@ -1,6 +1,6 @@
-# CJS Mustache Compiler
+# CJS Mustache Compiler [![npm version](https://badge.fury.io/js/cjsmc.svg)](https://badge.fury.io/js/cjsmc)
 
-Simple solution for compiling mustache templates into a CommonJS Module
+Simple solution for compiling Mustache templates into a CommonJS Module.
 
 # Why?
 To share same templates on server-side and client-side use (via browserify).
@@ -8,6 +8,9 @@ To share same templates on server-side and client-side use (via browserify).
 # How?
 Builds them into pre-compiled templates.
 
+# Architecture requirements:
+    views/
+    
 # Usage:
 
 # Build templates
@@ -15,7 +18,7 @@ Builds them into pre-compiled templates.
 Gulp:
 
     gulp.task('clean', function() {
-        return del([paths.built, 'client/templates.js']);
+        return del(['client/templates.js']);
     });
 
     gulp.task('templates', ['clean'], function (cb) {
@@ -32,7 +35,7 @@ NPM script:
 # Use templates
 
     var templates from './client/templates';
-    templates['first.mustache'];
+    var myFirstTemplate = templates['first.mustache'];
 
 
 # TODO
