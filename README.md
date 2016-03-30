@@ -2,7 +2,8 @@
 
 Simple solution for compiling Mustache templates into a CommonJS Module.
 
-Example APP using it located https://github.com/craigtaub/cjsmc-example-app
+Example APP using it located https://github.com/craigtaub/cjsmc-example-app.
+
 Shares compiled templates.
 
 # Why?
