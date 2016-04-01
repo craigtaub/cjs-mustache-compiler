@@ -1,6 +1,6 @@
 {
   "name": "cjsmc",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Compiling mustache templates into a CommonJS Module",
   "main": "lib/index.js",
   "scripts": {
