@@ -4,17 +4,15 @@ Simple solution for compiling Mustache templates into a CommonJS Module.
 
 Example APP using it located https://github.com/craigtaub/cjsmc-example-app.
 
-Shares compiled templates.
-
 # Why?
-To share same templates on server-side and client-side use (via browserify).
+To share same templates on server-side and client-side. Easily added to any bundle.
 
 # How?
-Builds them into pre-compiled templates.
+Builds them into pre-compiled templates. Accessible via keys as filename.
 
 # Architecture requirements:
     views/
-    
+
 # Usage:
 
 # Build templates
@@ -41,6 +39,10 @@ NPM script:
     var templates from './client/templates';
     var myFirstTemplate = templates['first.mustache'];
 
+# Run tests and linter
+
+    npm run test
+    npm run lint
 
 # TODO
 
