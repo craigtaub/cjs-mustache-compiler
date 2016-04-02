@@ -17,7 +17,7 @@ Builds them into pre-compiled templates. Accessible via keys as filename.
 
 # Build templates
 
-Gulp:
+via Gulp (shell):
 
     gulp.task('clean', function() {
         return del(['client/templates.js']);
@@ -30,7 +30,9 @@ Gulp:
             ]));
     });
 
-NPM script:
+OR gulp-plugin at https://www.npmjs.com/package/gulp-cjsmc
+
+via NPM script:
 
     'node node_modules/cjsmc/lib/index.js >> client/templates.js'
 
