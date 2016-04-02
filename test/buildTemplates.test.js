@@ -1,25 +1,26 @@
 var assert = require('assert');
 var fs = require('fs');
 var sinon = require('sinon');
+var buildTemplates = require('../lib/buildTemplates');
 
-describe('CJSMC', function() {
+describe('buildTemplates', function() {
     var firstDirReadStub;
     var firstFileReadStub;
     var jsonStub;
+    var templates;
 
     beforeEach(function () {
         firstDirReadStub = sinon.stub(fs, 'readdirSync', fs.readdirSync);
         firstFileReadStub = sinon.stub(fs, 'readFileSync', fs.readFileSync);
         jsonStub = sinon.stub(JSON, 'stringify', JSON.stringify);
-
-        require('../lib/index');
+        templates = buildTemplates();
     });
 
     afterEach(function () {
         firstDirReadStub.restore();
         firstFileReadStub.restore();
         jsonStub.restore();
-        delete require.cache[require.resolve('../lib/index')];
+        templates = '';
     });
 
     it('should read list from /views folder', function () {
@@ -29,7 +30,7 @@ describe('CJSMC', function() {
 
     describe('if not a partial', function() {
         it('should read contents of /views/item', function () {
-            assert.equal(firstFileReadStub.getCall(2).args[0], 'views/test.mustache');
+            assert.equal(firstFileReadStub.getCall(1).args[0], 'views/test.mustache');
         });
 
     });
@@ -39,19 +40,19 @@ describe('CJSMC', function() {
           assert.equal(firstDirReadStub.getCall(1).args[0], 'views/partials');
       });
       it('should read contents of view/partials/item', function () {
-            assert.equal(firstFileReadStub.getCall(1).args[0], 'views/partials/test-partial.mustache');
+            assert.equal(firstFileReadStub.getCall(0).args[0], 'views/partials/test-partial.mustache');
       });
 
     });
 
-    it('should write all file data to object which is JSON.stringify', function () {
-        var expectedTemplate = {
+    it('should return all file data in single JSON object ', function () {
+        var expectedTemplate = JSON.stringify({
           'test-partial.mustache': 'partial-test\n',
           'test.mustache': 'test\n'
-        };
+        });
 
         assert.deepEqual(
-          jsonStub.getCall(1).args[0],
+          templates,
           expectedTemplate
         );
     });

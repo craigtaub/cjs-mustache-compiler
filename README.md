@@ -34,20 +34,21 @@ NPM script:
 
     'node node_modules/cjsmc/lib/index.js >> client/templates.js'
 
-# Use templates
+# Use templates (from anywhere)
 
     var templates from './client/templates';
-    var myFirstTemplate = templates['first.mustache'];
+
+    var template = templates['first.mustache'];
+    var viewData = { name: 'Your name' };
+
+    var partialTemplate = templates['two.mustache'];
+    var partial = { 'partials/two': partialTemplate }
+
+    var markup = Mustache.render(
+        template, viewData, partial
+    );
 
 # Run tests and linter
 
     npm run test
     npm run lint
-
-# TODO
-
-Clean usage so can use cjsmc as gulp-plugin (gulp-cjsmc). https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/README.md
-
-    return gulp.src('.')
-      .pipe(cjsmc())
-      .pipe(gulp.dest('client/templates'));
