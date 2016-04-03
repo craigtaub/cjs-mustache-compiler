@@ -1,6 +1,7 @@
 # CJS Mustache Compiler [![npm version](https://badge.fury.io/js/cjsmc.svg)](https://badge.fury.io/js/cjsmc) [![Build Status](https://travis-ci.org/craigtaub/cjsmc.svg?branch=master)](https://travis-ci.org/craigtaub/cjsmc)
 
 Simple solution for compiling Mustache templates into a CommonJS Module.
+Now available as a 'gulp-plugin' at https://www.npmjs.com/package/gulp-cjsmc.
 
 Example APP using it located https://github.com/craigtaub/cjsmc-example-app.
 
