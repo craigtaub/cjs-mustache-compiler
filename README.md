@@ -8,7 +8,7 @@ Example APP using it located https://github.com/craigtaub/cjsmc-example-app.
 # Why?
 To share same templates on server-side and client-side. Easily added to any bundle.
 
-# How?
+# How? 
 Builds them into pre-compiled templates. Accessible via keys as filename.
 
 # Architecture requirements:
